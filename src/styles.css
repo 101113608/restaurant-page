@@ -1,4 +1,21 @@
-*, *::before, *::after {
+@font-face {
+    font-family: "American Karlie";
+    src: url(fonts/AmericanKarlie.woff2);
+}
+
+@font-face {
+    font-family: "Monday Ramen";
+    src: url(fonts/MondayRamen.woff2);
+}
+
+@font-face {
+    font-family: "Roboto Regular";
+    src: url(fonts/roboto-regular-webfont.woff2);
+}
+
+*,
+*::before,
+*::after {
     box-sizing: border-box;
 }
 
