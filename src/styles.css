@@ -24,6 +24,82 @@
     padding: 0;
 }
 
+:root {
+    --default-font: "Monday Ramen", "Roboto Regular" , Arial, Helvetica Neue, Helvetica, sans-serif;
+
+    --desert-sand-clr: #E5D0AC;
+    --crimson-clr: #A31D1D;
+    --plum-clr: #6D2323;
+}
+
 body {
     min-height: 100svh;
+    display: flex;
+    flex-direction: column;
+    font-family: var(--default-font);
+}
+
+/* Base styling */
+nav,
+footer {
+    padding: 1.5rem
+}
+
+nav {
+    background-color: var(--desert-sand-clr);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    gap: 1rem;
+}
+
+nav button {
+    font-size: 1.5rem;
+    padding: 0.5rem 0.75rem;
+    cursor: pointer;
+    border: none;
+    background-color: var(--desert-sand-clr);
+    font-family: var(--default-font);
+}
+
+nav button:hover {
+    color: var(--crimson-clr);
+}
+
+#logo {
+    display: flex;
+    align-items: end;
+    gap: 1rem;
+    font-family: "American Karlie", var(--default-font);
+    font-size: 2rem;
+}
+
+footer {
+    color: #fff;
+    background-color: var(--plum-clr);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+footer a:link {
+    color: #fff;
+}
+
+footer a:visited {
+    color: var(--desert-sand-clr);
+}
+
+ul {
+    list-style: none;
+}
+
+#content {
+    flex: 1;
+    background-color: var(--desert-sand-clr);
+    font-size: 1.25rem;
 }
