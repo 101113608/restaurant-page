@@ -8,11 +8,21 @@
     - [Author link](#https://www.flaticon.com/authors/freepik)
     - [License link](#https://www.flaticon.com/legal#nav-flaticon-agreement)
 
+- "Send Email Paper Plane" by Streamline, licensed under Streamline
+    - [Image link](#https://www.streamlinehq.com/icons/download/send-email-paper-plane-1--32169)
+    - [Author link](#https://streamlinehq.com/)
+    - [License link](#https://help.streamlinehq.com/en/articles/5354376-streamline-free-license)
+
 ### Images
 - "cooked food on white ceramic bowl" by Stephen Bedase, licensed under Unsplash
     - [Image link](#https://unsplash.com/photos/cooked-food-on-white-ceramic-bowl-WjdOYhgTGCM?utm_content=creditShareLink&utm_medium=referral&utm_source=unsplash)
     - [Author link](#https://unsplash.com/@stephenkbedase)
     - [License link](#https://unsplash.com/license)
+
+- "Restaurant at Night" by Hoi Wai, licensed under Pexels
+    - [Image link](#https://www.pexels.com/photo/restaurant-at-night-20250944/)
+    - [Author link](#https://www.pexels.com/@hoiwaihk/)
+    - [License link](#https://www.pexels.com/license/)
 
 ### Fonts
 - "American Karlie" by Linafisstudio, licensed under Freeware
