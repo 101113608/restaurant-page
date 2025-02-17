@@ -73,6 +73,11 @@ nav button:hover {
     color: var(--crimson-clr);
 }
 
+.highlight-tab {
+    color: var(--crimson-clr);
+    text-shadow: 1px 1px 12px var(--fire-engine-red-clr);
+}
+
 #logo {
     display: flex;
     align-items: end;
