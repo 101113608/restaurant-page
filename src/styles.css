@@ -25,7 +25,8 @@
 }
 
 :root {
-    --default-font: "Monday Ramen", "Roboto Regular" , Arial, Helvetica Neue, Helvetica, sans-serif;
+    --standard-font: "Roboto Regular", Arial, Helvetica Neue, Helvetica, sans-serif;
+    --ramen-font: "Monday Ramen", var(--standard-font);
 
     --desert-sand-clr: #E5D0AC;
     --burlywood-clr: #D7B77F;
@@ -38,7 +39,7 @@ body {
     min-height: 100svh;
     display: flex;
     flex-direction: column;
-    font-family: var(--default-font);
+    font-family: var(--ramen-font);
 }
 
 /* Base styling */
@@ -65,7 +66,7 @@ nav button {
     cursor: pointer;
     border: none;
     background-color: var(--desert-sand-clr);
-    font-family: var(--default-font);
+    font-family: var(--ramen-font);
 }
 
 nav button:hover {
@@ -76,7 +77,7 @@ nav button:hover {
     display: flex;
     align-items: end;
     gap: 1rem;
-    font-family: "American Karlie", var(--default-font);
+    font-family: "American Karlie", var(--ramen-font);
     font-size: 2rem;
 }
 
@@ -127,7 +128,8 @@ ul {
     justify-content: space-evenly;
 }
 
-.home button {
+.home button,
+#contactForm button {
     font-family: "Monday Ramen";
     font-size: 1.5rem;
     padding: 0.5rem 0.75rem;
@@ -149,7 +151,8 @@ ul {
     -o-transition: 0.3s;
 }
 
-.home button:hover {
+.home button:hover,
+#contactForm button:hover {
     background-color: var(--fire-engine-red-clr);
     border: 3px solid var(--fire-engine-red-clr);
 }
@@ -169,4 +172,117 @@ ul {
 .home>.section>.subsection>ul {
     display: grid;
     gap: 0.25rem;
+}
+
+/* Pages w/ banners */
+#content.banner-page {
+    display: grid;
+    grid-template-rows: max-content 1fr;
+}
+
+.banner {
+    color: #fff;
+    font-size: 4.5rem;
+    text-align: center;
+    padding: 4rem 0;
+
+    background-position: bottom;
+    background-size: cover;
+    background-blend-mode: multiply;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.banner h4::after {
+    /* Banner Icon */
+    position: relative;
+    left: 20px;
+    top: 15px;
+}
+
+/* 'Contact Us' page styling */
+.banner.contact-us {
+    background-image: url('images/banners/contact-us-banner.jpg');
+}
+
+.banner.contact-us h4::after {
+    content: url("images/icons/contact-us-icon.svg");
+}
+
+.main.contact-us {
+    display: flex;
+    justify-content: center;
+}
+
+#contactForm {
+    margin-top: 2rem;
+    font-size: 1.5rem;
+
+    display: grid;
+    grid-template-columns: min-content 1fr min-content 1fr;
+    grid-auto-rows: min-content;
+    align-items: start;
+    gap: 1rem;
+}
+
+fieldset {
+    display: contents;
+}
+
+#contactForm h2,
+#contactForm button {
+    grid-column: span 4;
+}
+
+#contactForm h2 {
+    margin-bottom: 0.25rem;
+    justify-self: center;
+}
+
+#contactForm button {
+    justify-self: end;
+}
+
+.form-input-section {
+    text-align: end;
+    display: grid;
+    grid-template-columns: subgrid;
+}
+
+.form-input-section:nth-of-type(-n+2) {
+    grid-column: span 2;
+}
+
+.form-input-section input,
+.form-input-section textarea {
+    font-family: var(--standard-font);
+    font-size: 1rem;
+    padding: 0.25rem;
+    background-color: var(--burlywood-clr);
+    border: none;
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+}
+
+.form-input-section input:focus-visible,
+.form-input-section textarea:focus-visible {
+    outline: 2px solid var(--crimson-clr);
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+}
+
+.form-input-section:nth-of-type(3) {
+    grid-column: span 4;
+}
+
+.form-input-section textarea {
+    grid-column: 2 / 5;
+    min-height: 15rem;
+    width: 40rem;
+    resize: none;
 }
