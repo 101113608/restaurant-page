@@ -4,7 +4,7 @@ class FormInput {
         this.type = type;
         this.label = label;
     }
-}
+};
 
 const formInputs = [
     new FormInput(
@@ -22,7 +22,7 @@ const formInputs = [
         "textarea",
         "Message"
     )
-]
+];
 
 function createLabel(formInput) {
     const label = document.createElement("label");
@@ -30,7 +30,7 @@ function createLabel(formInput) {
     label.textContent = formInput.label;
 
     return label;
-}
+};
 
 function createInput(formInput) {
     let input;
@@ -46,7 +46,7 @@ function createInput(formInput) {
     input.name = formInput.id;
 
     return input;
-}
+};
 
 function createFieldset(formInputArr) {
     const fieldset = document.createElement("fieldset");
@@ -65,7 +65,7 @@ function createFieldset(formInputArr) {
     });
 
     return fieldset;
-}
+};
 
 function createFormElement() {
     const form = document.createElement("form");
@@ -78,14 +78,14 @@ function createFormElement() {
     })
 
     return form;
-}
+};
 
-function createHeading(text) {
-    const heading = document.createElement("h2");
+function createHeading(type, text) {
+    let heading = document.createElement(`${type}`);
     heading.textContent = text;
 
     return heading;
-}
+};
 
 function createSubmitButton(text) {
     const button = document.createElement("button");
@@ -93,30 +93,27 @@ function createSubmitButton(text) {
     button.type = "submit";
 
     return button;
-}
+};
 
 function generateForm() {
     const form = createFormElement();
-    const heading = createHeading("Got a Question? Leave a message!");
+    const heading = createHeading("h2", "Got a Question? Leave a message!");
     const fieldset = createFieldset(formInputs);
     const submitButton = createSubmitButton("Submit");
 
     form.append(heading, fieldset, submitButton);
 
     return form;
-}
+};
 
 function createBanner() {
     const div = document.createElement("div");
-    const heading = document.createElement("h4");
-
-    div.classList.add("banner", "contact-us")
-    heading.textContent = "Contact Us";
+    const heading = createHeading("h4", "Contact Us");
 
     div.append(heading);
 
     return div;
-}
+};
 
 function createMainSection() {
     const main = document.createElement("div");
@@ -126,13 +123,13 @@ function createMainSection() {
     main.append(form);
 
     return main;
-}
+};
 
 function generateContactContent() {
     const main = createMainSection();
     const banner = createBanner();
 
     return [banner, main];
-}
+};
 
 export { generateContactContent };
