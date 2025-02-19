@@ -117,13 +117,13 @@ function createBanner() {
 };
 
 function createMainSection() {
-    const main = document.createElement("div");
+    const div = document.createElement("div");
     const form = generateForm();
 
-    main.classList.add("main", "contact-us");
-    main.append(form);
+    div.classList.add("main", "contact-us");
+    div.append(form);
 
-    return main;
+    return div;
 };
 
 function generateContactContent() {
