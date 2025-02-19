@@ -110,6 +110,7 @@ function createBanner() {
     const div = document.createElement("div");
     const heading = createHeading("h4", "Contact Us");
 
+    div.classList.add("banner", "contact-us");
     div.append(heading);
 
     return div;
