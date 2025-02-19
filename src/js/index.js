@@ -64,4 +64,4 @@ function initContent() {
     highlightCurrentTab("home");
 }
 
-initContent();
+// initContent();
