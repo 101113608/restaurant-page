@@ -63,6 +63,13 @@ navMenu.addEventListener("click", event => {
     }
 });
 
+contentDiv.addEventListener("click", event => {
+    if (event.target.textContent.toLowerCase() === "view menu") {
+        displayContent(["banner-page", "menu"], generateMenuContent);
+        highlightCurrentTab("menu");
+    }
+});
+
 function initContent() {
     displayContent("home", generateHomeContent);
     highlightCurrentTab("home");
