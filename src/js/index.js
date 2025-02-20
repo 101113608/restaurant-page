@@ -1,6 +1,7 @@
 import "../styles.css";
 import { generateHomeContent } from "./home.js";
 import { generateContactContent } from "./contact-us.js";
+import { generateMenuContent } from "./menu.js";
 
 const contentDiv = document.querySelector("#content");
 const navMenu = document.querySelector("nav ul");
@@ -47,6 +48,9 @@ navMenu.addEventListener("click", event => {
             case 'home':
                 displayContent(event.target.dataset.tab, generateHomeContent);
                 break;
+            case 'menu':
+                displayContent(["banner-page", event.target.dataset.tab], generateMenuContent);
+                break;
             case 'contact-us':
                 displayContent(["banner-page", event.target.dataset.tab], generateContactContent);
                 document.querySelector("form").addEventListener("submit", () => initContent());
@@ -64,4 +68,4 @@ function initContent() {
     highlightCurrentTab("home");
 }
 
-// initContent();
+initContent();
