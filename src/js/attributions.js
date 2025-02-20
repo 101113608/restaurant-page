@@ -28,7 +28,7 @@ function createAuthorAttr(attribution) {
     if (!Array.isArray(attribution.author)) {
         authorAttr = createAnchorElement(attribution.author.name, attribution.author.link);
     } else {
-        authorAttr = []
+        authorAttr = [];
         attribution.author.forEach(author => {
             authorAttr.push(createAnchorElement(author.name, author.link));
         });
@@ -50,7 +50,7 @@ function createAttribution(attribution) {
     } else {
         authorAttr.forEach(author => {
             paragraphElement.append(author, ", ")
-        })
+        });
     }
 
     paragraphElement.append(`licensed by `, licenseAttr);

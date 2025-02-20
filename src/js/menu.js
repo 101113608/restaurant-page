@@ -15,7 +15,7 @@ class Dish {
         this.description = description;
         this.photo = photo;
     }
-};
+}
 
 const dishes = [
     new Dish(
@@ -75,7 +75,7 @@ function createHeading(type, text) {
     heading.textContent = text;
 
     return heading;
-};
+}
 
 function createItemPhoto(dish) {
     const div = document.createElement("div");
@@ -87,7 +87,7 @@ function createItemPhoto(dish) {
     div.append(img);
 
     return div;
-};
+}
 
 function createItemDescription(dish) {
     const div = document.createElement("div");
@@ -100,7 +100,7 @@ function createItemDescription(dish) {
     div.append(heading, paragraph);
 
     return div;
-};
+}
 
 function createMenuItem(dish) {
     const div = document.createElement("div");
@@ -111,7 +111,7 @@ function createMenuItem(dish) {
     div.append(itemPhoto, itemDesc);
 
     return div;
-};
+}
 
 function createBanner() {
     const div = document.createElement("div");
@@ -121,7 +121,7 @@ function createBanner() {
     div.append(heading);
 
     return div;
-};
+}
 
 function createMainSection(dishesArr) {
     const div = document.createElement("div");
@@ -133,13 +133,13 @@ function createMainSection(dishesArr) {
     div.classList.add("main", "menu");
 
     return div;
-};
+}
 
 function generateMenuContent() {
     const main = createMainSection(dishes);
     const banner = createBanner();
 
     return [banner, main];
-};
+}
 
 export { generateMenuContent };

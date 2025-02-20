@@ -4,7 +4,7 @@ class FormInput {
         this.type = type;
         this.label = label;
     }
-};
+}
 
 const formInputs = [
     new FormInput(
@@ -30,7 +30,7 @@ function createLabel(formInput) {
     label.textContent = formInput.label;
 
     return label;
-};
+}
 
 function createInput(formInput) {
     let input;
@@ -46,7 +46,7 @@ function createInput(formInput) {
     input.name = formInput.id;
 
     return input;
-};
+}
 
 function createFieldset(formInputArr) {
     const fieldset = document.createElement("fieldset");
@@ -65,7 +65,7 @@ function createFieldset(formInputArr) {
     });
 
     return fieldset;
-};
+}
 
 function createFormElement() {
     const form = document.createElement("form");
@@ -75,17 +75,17 @@ function createFormElement() {
         e.preventDefault();
         alert("Your message has been sent!");
         form.reset();
-    })
+    });
 
     return form;
-};
+}
 
 function createHeading(type, text) {
     let heading = document.createElement(`${type}`);
     heading.textContent = text;
 
     return heading;
-};
+}
 
 function createSubmitButton(text) {
     const button = document.createElement("button");
@@ -93,7 +93,7 @@ function createSubmitButton(text) {
     button.type = "submit";
 
     return button;
-};
+}
 
 function generateForm() {
     const form = createFormElement();
@@ -104,7 +104,7 @@ function generateForm() {
     form.append(heading, fieldset, submitButton);
 
     return form;
-};
+}
 
 function createBanner() {
     const div = document.createElement("div");
@@ -114,7 +114,7 @@ function createBanner() {
     div.append(heading);
 
     return div;
-};
+}
 
 function createMainSection() {
     const div = document.createElement("div");
@@ -124,13 +124,13 @@ function createMainSection() {
     div.append(form);
 
     return div;
-};
+}
 
 function generateContactContent() {
     const main = createMainSection();
     const banner = createBanner();
 
     return [banner, main];
-};
+}
 
 export { generateContactContent };

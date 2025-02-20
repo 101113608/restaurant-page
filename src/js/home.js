@@ -3,7 +3,7 @@ class SubsectionItem {
         this.element = element;
         this.text = text;
     }
-};
+}
 
 const tradingHoursSubsection = [
     new SubsectionItem(
@@ -59,7 +59,7 @@ function createListElement(subsectionItem) {
     });
 
     return listElement;
-};
+}
 
 function createSubsection(subsection) {
     const subsectionDiv = document.createElement("div");
@@ -72,12 +72,12 @@ function createSubsection(subsection) {
             element.textContent = subsectionItem.text;
         }
         subsectionDiv.append(element);
-    })
+    });
 
     subsectionDiv.classList.add("subsection");
 
     return subsectionDiv;
-};
+}
 
 function generateHomeContent() {
     const divElement = document.createElement("div");
@@ -90,6 +90,6 @@ function generateHomeContent() {
     divElement.append(descriptionElement, tradingHoursElement, addressElement);
 
     return divElement;
-};
+}
 
 export { generateHomeContent };
