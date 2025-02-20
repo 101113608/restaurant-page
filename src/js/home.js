@@ -42,7 +42,7 @@ const descriptionSubsection = [
     ),
     new SubsectionItem(
         "p",
-        "A new Japanese Ramen Store located on planet Earth,come and enjoy a delicious bowl of ramen at deliciously low prices!"
+        "A new Japanese Ramen Store located on planet Earth, come and enjoy a delicious bowl of ramen at deliciously low prices!"
     ),
     new SubsectionItem(
         "button",
