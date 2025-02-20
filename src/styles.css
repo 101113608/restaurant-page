@@ -360,3 +360,86 @@ fieldset {
     font-size: 1rem;
     text-decoration: underline;
 }
+
+dialog {
+    margin: auto;
+    inset: 0;
+    height: 50%;
+    width: 50%;
+    background-color: #d7b77f;
+    border: 3px solid #6D2323;
+    overflow-y: auto;
+    border-radius: 12px;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    -ms-border-radius: 12px;
+    -o-border-radius: 12px;
+}
+
+dialog::backdrop {
+    background-color: #b4b4b44d;
+    backdrop-filter: blur(5px);
+}
+
+dialog .content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 2rem;
+}
+
+dialog .attribution-section {
+    display: contents;
+}
+
+dialog .content ul {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: min-content 1fr;
+}
+
+dialog .content ul li {
+    grid-column: span 2;
+    display: grid;
+    align-items: center;
+    grid-template-columns: subgrid;
+    gap: 1rem;
+    font-size: 1.25rem
+}
+
+dialog .content .attribution-section ul li img {
+    max-width: 200px;
+}
+
+dialog .content h1 {
+    text-align: center;
+    text-decoration: underline;
+}
+
+dialog .content h2 {
+    font-size: 1.5rem;
+}
+
+dialog .content .attribution-section:nth-of-type(3) ul li p {
+    grid-column: span 2;
+}
+
+.american-karlie-font {
+    font-family: "American Karlie";
+}
+
+.two-rem-size {
+    font-size: 2rem;
+}
+
+.monday-ramen-font {
+    font-family: "Monday Ramen";
+}
+
+.roboto-font {
+    font-family: "Roboto Regular";
+}
+
+body.open-modal {
+    overflow-y: hidden;
+}
