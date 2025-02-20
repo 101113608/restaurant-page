@@ -349,3 +349,14 @@ fieldset {
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
 }
+
+/* 'Attributions' modal styling */
+#attributions {
+    background-color: var(--plum-clr);
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-family: var(--ramen-font);
+    font-size: 1rem;
+    text-decoration: underline;
+}
